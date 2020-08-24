@@ -1,0 +1,43 @@
+{
+  "name": "girlfriend.technology",
+  "version": "0.0.1",
+  "main": "server.js",
+  "license": "Unlicense",
+  "scripts": {
+    "preinstall": "npx npm-force-resolutions",
+    "dev": "next",
+    "start": "next start",
+    "build": "next build",
+    "next": "next",
+    "test": "jest",
+    "lint": "standard"
+  },
+  "dependencies": {
+    "next": "^9.5.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "tachyons": "^4.11.1"
+  },
+  "devDependencies": {
+    "babel-plugin-inline-react-svg": "^1.1.1",
+    "jest": "^26.4.2",
+    "react-test-renderer": "^16.13.0",
+    "standard": "^14.3.3"
+  },
+  "resolutions": {
+    "js-yaml": "^3.14.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>/.next/",
+      "<rootDir>/node_modules/"
+    ]
+  },
+  "standard": {
+    "env": "jest"
+  }
+}
