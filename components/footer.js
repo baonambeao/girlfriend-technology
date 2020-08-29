@@ -1,15 +1,30 @@
 import React from 'react'
 import Logo from '../public/static/mask-icon.svg'
+import Link from 'next/link'
 
 const cx = {
   footer: 'left-0 right-0 absolute w-100 fw3 pv5 tc i',
   copyright: 'i',
   a: 'mh2 no-underline underline-hover',
-  logo: 'v-mid dib mh1 stroke-current'
+  logo: 'v-mid dib mh1 stroke-current',
+  links: 'mv2'
 }
 
 const Nav = () => (
   <footer className={cx.footer}>
+
+    <div className={cx.links}>
+      <Link
+        href='/privacy'
+        as='/privacy'
+      >
+        <a
+          title='privacy policy'
+        >
+          your privacy is important
+        </a>
+      </Link>
+    </div>
     <p className={cx.copyright}>
       © girlfriend technology {new Date().getFullYear()}
     </p>

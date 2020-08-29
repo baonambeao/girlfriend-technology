@@ -103,6 +103,18 @@ exports[`page - index should render 1`] = `
   <footer
     className="left-0 right-0 absolute w-100 fw3 pv5 tc i"
   >
+    <div
+      className="mv2"
+    >
+      <a
+        href="/privacy"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        title="privacy policy"
+      >
+        your privacy is important
+      </a>
+    </div>
     <p
       className="i"
     >
