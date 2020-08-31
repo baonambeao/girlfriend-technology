@@ -5,7 +5,7 @@ import Footer from '../components/footer'
 
 const cx = {
   main: 'mw8 center',
-  content: 'measure pv3',
+  content: 'measure pa3',
   boxes: 'tl dib'
 }
 
