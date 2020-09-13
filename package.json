@@ -26,7 +26,8 @@
     "standard": "^14.3.3"
   },
   "resolutions": {
-    "js-yaml": "^3.14.0"
+    "js-yaml": "^3.14.0",
+    "node-fetch": "^2.6.1"
   },
   "jest": {
     "transform": {
