@@ -1,4 +1,3 @@
-import React from 'react'
 import Logo from '../public/static/mask-icon.svg'
 import Link from 'next/link'
 

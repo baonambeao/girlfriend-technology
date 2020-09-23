@@ -1,4 +1,3 @@
-import React from 'react'
 import NavItem from './nav-item'
 import Logo from '../public/static/mask-icon.svg'
 
