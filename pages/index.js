@@ -22,7 +22,7 @@ const Index = () => (
     <BigContent className={cx.content}>
       <Logo className={`${cx.logo} trace`} />
       <BoxedText {...theme}>
-        {'apps for us'}
+        apps for us
       </BoxedText>
     </BigContent>
     <Footer />

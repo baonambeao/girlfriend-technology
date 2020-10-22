@@ -28,7 +28,7 @@ const Projects = () => (
           {'> projects'}
         </BoxedText>
         <BoxedText {...theme}>
-          {'in development'}
+          in development
         </BoxedText>
       </span>
     </BigContent>

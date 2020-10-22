@@ -28,7 +28,7 @@ const Labs = () => (
           {'> labs'}
         </BoxedText>
         <BoxedText {...theme}>
-          {'in development'}
+          in development
         </BoxedText>
       </span>
     </BigContent>
