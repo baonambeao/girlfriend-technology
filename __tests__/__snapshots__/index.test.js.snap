@@ -119,7 +119,7 @@ exports[`page - index should render 1`] = `
       className="i"
     >
       © girlfriend technology 
-      2020
+      2021
     </p>
     <a
       className="mh2 no-underline underline-hover"
