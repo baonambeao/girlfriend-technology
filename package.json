@@ -15,8 +15,8 @@
   "dependencies": {
     "next": "^10.0.9",
     "prop-types": "^15.7.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "tachyons": "^4.11.1"
   },
   "devDependencies": {
@@ -24,7 +24,7 @@
     "babel-plugin-inline-react-svg": "^2.0.1",
     "jest": "^26.6.3",
     "next-purgecss": "^4.0.0",
-    "react-test-renderer": "^17.0.1",
+    "react-test-renderer": "^17.0.2",
     "standard": "^16.0.3"
   },
   "resolutions": {
