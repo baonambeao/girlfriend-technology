@@ -9,7 +9,7 @@
     "start": "next start",
     "build": "next build",
     "next": "next",
-    "test": "jest --passWithNoTest",
+    "test": "jest --passWithNoTests",
     "lint": "standard"
   },
   "dependencies": {
