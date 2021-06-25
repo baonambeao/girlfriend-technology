@@ -9,25 +9,24 @@
     "start": "next start",
     "build": "next build",
     "next": "next",
-    "test": "jest",
+    "test": "jest --passWithNoTest",
     "lint": "standard"
   },
   "dependencies": {
-    "next": "^10.2.3",
+    "next": "^11.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "tachyons": "^4.11.1"
   },
   "devDependencies": {
-    "@zeit/next-css": "^1.0.1",
     "babel-plugin-inline-react-svg": "^2.0.1",
     "jest": "^27.0.5",
-    "next-purgecss": "^4.0.0",
     "react-test-renderer": "^17.0.2",
     "standard": "^16.0.3"
   },
   "resolutions": {
+    "css-what": "^5.0.1",
     "js-yaml": "^3.14.0",
     "minimist": "^1.2.5",
     "node-fetch": "^2.6.1",
