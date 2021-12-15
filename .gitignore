@@ -1,4 +1,8 @@
-.next/*
-node_modules/*
-out/*
+dist
+node_modules/
+.snowback/
+npm-debug.log
+.env
+.env.production
 .DS_Store
+
