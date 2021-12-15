@@ -3,19 +3,46 @@
 @tailwind utilities;
 
 body {
-  color: #fff;
-  background-color: #000;
+  color: var(--light);
+  background-color: var(--dark);
 }
+
 a {
-  color: #fff;
+  color: var(--light);
 }
+
 @media (prefers-color-scheme: light) {
   body {
-    color: #111;
-    background-color: #fff;
+    color: var(--dark);
+    background-color: var(--light);
   }
+
   a {
-    color: #111;
+    color: var(--dark);
   }
+}
+
+.stroke-current path {
+  stroke: currentColor;
+}
+
+.hyphens-auto {
+  hyphens: auto;
+}
+
+.trace path {
+  stroke-dasharray: 30;
+  stroke-dashoffset: 30;
+  animation: trace 3s ease-in forwards;
+}
+
+@keyframes trace {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+nav {
+  backdrop-filter: blur(.75rem);
 }
 

@@ -1,8 +1,9 @@
-import Layout from '../components/layout'
-import Nav from '../components/nav'
-import Footer from '../components/footer'
-import BigContent from '../components/big-content'
-import BoxedText from '../components/boxed-text'
+---
+import Layout from '../layouts/base-layout.astro'
+import Nav from '../components/nav.astro'
+import Footer from '../components/footer.astro'
+import BigContent from '../components/big-content.astro'
+import BoxedText from '../components/boxed-text.astro'
 
 const cx = {
   main: 'mw8 center',
@@ -14,26 +15,23 @@ const theme = {
   light: '#5af9f9',
   dark: '#005252'
 }
+---
+<Layout
+  title='girlfriend technology ~ projects'
+  className={cx.main}
+  {...theme}
+>
+  <Nav />
+  <BigContent className={cx.content}>
+    <span class={cx.boxes}>
+      <BoxedText {...theme}>
+        {'> projects'}
+      </BoxedText>
+      <BoxedText {...theme}>
+        in development
+      </BoxedText>
+    </span>
+  </BigContent>
+  <Footer />
+</Layout>
 
-const Projects = () => (
-  <Layout
-    title='girlfriend technology ~ projects'
-    className={cx.main}
-    {...theme}
-  >
-    <Nav />
-    <BigContent className={cx.content}>
-      <span className={cx.boxes}>
-        <BoxedText {...theme}>
-          {'> projects'}
-        </BoxedText>
-        <BoxedText {...theme}>
-          in development
-        </BoxedText>
-      </span>
-    </BigContent>
-    <Footer />
-  </Layout>
-)
-
-export default Projects

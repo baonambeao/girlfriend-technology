@@ -1,5 +1,5 @@
-import Logo from '../public/static/mask-icon.svg'
-import Link from 'next/link'
+---
+import Logo from '../../public/mask-icon.svg'
 
 const cx = {
   footer: 'left-0 right-0 absolute w-100 fw3 pv5 tc i',
@@ -8,38 +8,30 @@ const cx = {
   logo: 'v-mid dib mh1 stroke-current',
   links: 'mv2'
 }
-
-const Nav = () => (
-  <footer className={cx.footer}>
-
-    <div className={cx.links}>
-      <Link
-        href='/privacy'
-        as='/privacy'
-      >
-        <a
-          title='privacy policy'
-        >
-          your privacy is important
-        </a>
-      </Link>
-    </div>
-    <p className={cx.copyright}>
-      © girlfriend technology {new Date().getFullYear()}
-    </p>
+---
+<footer class={cx.footer}>
+  <div class={cx.links}>
     <a
-      href='https://melaniekat.com'
-      title='with love from melanie kat'
-      className={cx.a}
+      href='/privacy'
+      title='privacy policy'
     >
-      with
-      <Logo
-        className={cx.logo}
-        width='1.5rem'
-      />
-      from melanie kat
+      your privacy is important
     </a>
-  </footer>
-)
+  </div>
+  <p class={cx.copyright}>
+    © girlfriend technology {new Date().getFullYear()}
+  </p>
+  <a
+    href='https://melaniekat.com'
+    title='with love from melanie kat'
+    class={cx.a}
+  >
+    with
+    <Logo
+      className={cx.logo}
+      width='1.5rem'
+    />
+    from melanie kat
+  </a>
+</footer>
 
-export default Nav

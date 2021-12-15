@@ -9,46 +9,43 @@ const cx = {
   right: 'flex-grow flex items-center',
   logo: 'v-mid dib mr1 stroke-current'
 }
+---
+<header class={cx.header}>
+  <nav class={cx.nav}>
+    <div class={cx.left}>
+      <NavItem
+        class={cx.name}
+        href='/'
+        title='girlfriend technology'
+      >
+        <Logo
+          class={cx.logo}
+          width='1.5rem'
+        />
+        girlfriend technology
+      </NavItem>
+    </div>
+    <div class={cx.right}>
+      <NavItem
+        href='/projects'
+        title='projects'
+      >
+        projects
+      </NavItem>
+      <NavItem
+        href='/labs'
+        title='labs'
+      >
+        labs
+      </NavItem>
+    </div>
+  </nav>
+  <style jsx global>
+    {`
+      nav {
+backdrop-filter: blur(.75rem);
+      }
+    `}
+  </style>
+</header>
 
-const Nav = () => (
-  <header className={cx.header}>
-    <nav className={cx.nav}>
-      <div className={cx.left}>
-        <NavItem
-          className={cx.name}
-          href='/'
-          title='girlfriend technology'
-        >
-          <Logo
-            className={cx.logo}
-            width='1.5rem'
-          />
-          girlfriend technology
-        </NavItem>
-      </div>
-      <div className={cx.right}>
-        <NavItem
-          href='/projects'
-          title='projects'
-        >
-          projects
-        </NavItem>
-        <NavItem
-          href='/labs'
-          title='labs'
-        >
-          labs
-        </NavItem>
-      </div>
-    </nav>
-    <style jsx global>
-      {`
-        nav {
-  backdrop-filter: blur(.75rem);
-        }
-      `}
-    </style>
-  </header>
-)
-
-export default Nav
