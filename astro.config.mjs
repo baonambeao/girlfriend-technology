@@ -3,6 +3,9 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
   renderers: ['@astrojs/renderer-react'],
   devOptions: {
     tailwindConfig: './tailwind.config.js',
+  },
+  buildOptions: {
+    site: 'https://girlfriend.technology'
   }
 })
 
