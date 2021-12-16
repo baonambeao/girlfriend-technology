@@ -7,9 +7,9 @@ import BoxedText from '../components/boxed-text.astro'
 import Logo from '../../public/mask-icon.svg'
 
 const cx = {
-  main: 'mw8 center',
-  content: 'fw9 i f1 ph3 pv6 mw6 tc center lh-title hyphens-auto',
-  logo: 'v-mid stroke-current'
+  main: 'max-w-5xl mx-auto',
+  content: 'font-black italic text-5xl px-4 py-32 max-w-lg text-center mx-auto leading-5 hyphens-auto',
+  logo: 'align-middle stroke-current trace'
 }
 
 const theme = {
@@ -20,7 +20,7 @@ const theme = {
 <Layout className={cx.main} {...theme}>
   <Nav />
   <BigContent class={cx.content}>
-    <Logo class={`${cx.logo} trace`} />
+    <Logo class={cx.logo} />
     <BoxedText {...theme}>
       apps for us
     </BoxedText>

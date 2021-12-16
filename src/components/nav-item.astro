@@ -2,14 +2,13 @@
 const cx = {
   a: 'link f6 f5-ns dib mr3 underline'
 }
-const { as, children, className, href, title, rel } = Astro.props
+const { className = cx.a, href, title, rel } = Astro.props
 ---
 <a
-  class={`${cx.a} ${className}`}
+  class={className}
   href={href}
   title={title}
   rel={rel}
 >
   <slot />
 </a>
-
