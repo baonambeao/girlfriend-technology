@@ -3,23 +3,12 @@
 @tailwind utilities;
 
 body {
-  color: var(--light);
-  background-color: var(--dark);
+  color: var(--dark);
+  background-color: var(--light);
 }
 
 a {
-  color: var(--light);
-}
-
-@media (prefers-color-scheme: light) {
-  body {
-    color: var(--dark);
-    background-color: var(--light);
-  }
-
-  a {
-    color: var(--dark);
-  }
+  color: var(--dark);
 }
 
 .vh-75 {
@@ -53,4 +42,3 @@ a {
 nav {
   backdrop-filter: blur(.75rem);
 }
-

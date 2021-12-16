@@ -1,10 +1,10 @@
 ---
-import Layout from '../layouts/base-layout.astro'
-import Nav from '../components/nav.astro'
-import Footer from '../components/footer.astro'
 import BigContent from '../components/big-content.astro'
 import BoxedText from '../components/boxed-text.astro'
-import Logo from '../../public/mask-icon.svg'
+import Footer from '../components/footer.astro'
+import Layout from '../layouts/base-layout.astro'
+import Logo from '../components/logo.astro'
+import Nav from '../components/nav.astro'
 
 const cx = {
   main: 'max-w-5xl mx-auto',
@@ -19,8 +19,8 @@ const theme = {
 ---
 <Layout className={cx.main} {...theme}>
   <Nav />
-  <BigContent class={cx.content}>
-    <Logo class={cx.logo} />
+  <BigContent className={cx.content}>
+    <Logo className={cx.logo} />
     <BoxedText {...theme}>
       apps for us
     </BoxedText>

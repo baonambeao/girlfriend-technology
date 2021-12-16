@@ -1,5 +1,6 @@
-import NavItem from './nav-item'
-import Logo from '../../public/mask-icon.svg'
+---
+import NavItem from './nav-item.astro'
+import Logo from './logo.astro'
 
 const cx = {
   header: 'font-light mb-4 h-8',
@@ -14,12 +15,12 @@ const cx = {
   <nav class={cx.nav}>
     <div class={cx.left}>
       <NavItem
-        class={cx.name}
+        className={cx.name}
         href='/'
         title='girlfriend technology'
       >
         <Logo
-          class={cx.logo}
+          className={cx.logo}
           width='1.5rem'
         />
         girlfriend technology

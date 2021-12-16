@@ -5,14 +5,10 @@ const cx = {
 }
 
 const {
-  className = '',
-  style = {},
+  className = cx.article
 } = Astro.props
 ---
-<article
-  class={`${cx.article} ${className}`}
-  style={style}
->
+<article class={className}>
   <div class={cx.articleInner}>
     <slot />
   </div>

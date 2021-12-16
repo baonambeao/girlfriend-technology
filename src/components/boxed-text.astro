@@ -2,19 +2,15 @@
 const cx = {
   span: 'text-5xl w-80 leading-5 mb-1 inline-block p-1 tracking-tighter'
 }
-const {
-  className = '',
-  light = '#ffffff',
-  dark = '#000000'
-} = Astro.props
+const { className = cx.span } = Astro.props
 ---
-<span
-  class={`${cx.span} ${className}`}
-  style={{
-    backgroundColor: dark,
-    color: light
-  }}
->
+<style>
+  span {
+    color: var(--light);
+    background-color: var(--dark);
+  }
+</style>
+<span class={className}>
   <slot />
 </span>
 
