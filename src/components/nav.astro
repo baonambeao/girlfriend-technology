@@ -2,12 +2,12 @@ import NavItem from './nav-item'
 import Logo from '../../public/mask-icon.svg'
 
 const cx = {
-  header: 'fw3 mb3 h2',
-  nav: 'pa3 fixed db w-100 left-0 flex justify-between bg-white-50',
-  name: 'i no-underline underline-hover db',
+  header: 'font-light mb-4 h-8',
+  nav: 'p-4 fixed block w-full left-0 flex justify-between bg-white-50',
+  name: 'text-sm md:text-base mr-4 italic no-underline hover:underline block',
   left: 'flex items-center',
-  right: 'flex-grow flex items-center',
-  logo: 'v-mid dib mr1 stroke-current'
+  right: 'grow flex items-center',
+  logo: 'align-middle inline-block mr-1 stroke-current'
 }
 ---
 <header class={cx.header}>
