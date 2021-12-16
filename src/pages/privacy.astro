@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/base-layout.astro'
+import Nav from '../components/nav.astro'
+import Footer from '../components/footer.astro'
+
+const cx = {
+  main: 'max-w-5xl mx-auto',
+  content: 'max-w-lg p-4',
+  boxes: 'text-left inline-block',
+  h2: 'my-5 font-bold text-xl',
+  h3: 'my-5 font-bold text-lg',
+  strong: 'font-bold',
+  p: 'my-4'
+}
+
+const theme = {
+  light: '#fff',
+  dark: '#333'
+}
+---
+<Layout
+  title='girlfriend technology ~ privacy policy'
+  className={cx.main}
+  {...theme}
+>
+  <Nav />
+  <div class={cx.content}>
+    <h2 class={cx.h2}>
+      Privacy Policy
+    </h2>
+    <p class={cx.p}>
+      <strong class={cx.strong}>
+        Last updated: Aug 29, 2020
+      </strong>
+    </p>
+    <p class={cx.p}>
+      This policy applies to all apps and websites provided by <em>girlfriend technology</em> for any platform.
+    </p>
+    <p class={cx.p}>
+      Privacy is very important and that is why there is zero data collection in anything provided by <em>girlfriend technology</em>.
+    </p>
+    <h3 class={cx.h3}>
+      Your concent
+    </h3>
+    <p class={cx.p}>
+      By using websites and apps by <em>girlfriend technology</em> you concent to privacy policy. …About how girlfriend.technology collects nothing. (isn't that weird?)
+    </p>
+  </div>
+  <Footer />
+</Layout>
+

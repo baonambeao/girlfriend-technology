@@ -1,0 +1,37 @@
+---
+import Logo from './logo.astro';
+
+const cx = {
+  footer: 'left-0 right-0 absolute w-full font-light py-16 text-center italic',
+  copyright: 'my-3 italic',
+  a: 'mx-2 no-underline hover:underline',
+  logo: 'align-middle inline-block mx-1 stroke-current',
+  links: 'my-2 underline'
+}
+---
+<footer class={cx.footer}>
+  <div class={cx.links}>
+    <a
+      href='/privacy'
+      title='privacy policy'
+    >
+      your privacy is important
+    </a>
+  </div>
+  <p class={cx.copyright}>
+    © girlfriend technology {new Date().getFullYear()}
+  </p>
+  <a
+    href='https://melaniekat.com'
+    title='with love from melanie kat'
+    class={cx.a}
+  >
+    with
+    <Logo
+      className={cx.logo}
+      width='1.5rem'
+    />
+    from melanie kat
+  </a>
+</footer>
+

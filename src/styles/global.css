@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: var(--dark);
+  background-color: var(--light);
+}
+
+a {
+  color: var(--dark);
+}
+
+.vh-75 {
+  height: 75vh;
+}
+
+.hyphens-auto {
+  hyphens: auto;
+}
+
+.trace path {
+  stroke-dasharray: 30;
+  stroke-dashoffset: 30;
+  animation: trace 3s ease-in forwards;
+}
+
+@keyframes trace {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+

@@ -1,0 +1,16 @@
+---
+const cx = {
+  article: 'vh-75 table w-full bg-cover',
+  articleInner: 'table-cell align-middle'
+}
+
+const {
+  className = cx.article
+} = Astro.props
+---
+<article class={className}>
+  <div class={cx.articleInner}>
+    <slot />
+  </div>
+</article>
+

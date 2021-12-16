@@ -1,0 +1,14 @@
+---
+const cx = {
+  a: 'text-sm md:text-base mr-4 inline-block underline'
+}
+const { className = cx.a, href, title, rel } = Astro.props
+---
+<a
+  class={className}
+  href={href}
+  title={title}
+  rel={rel}
+>
+  <slot />
+</a>

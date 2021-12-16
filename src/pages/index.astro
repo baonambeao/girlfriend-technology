@@ -1,0 +1,30 @@
+---
+import BigContent from '../components/big-content.astro'
+import BoxedText from '../components/boxed-text.astro'
+import Footer from '../components/footer.astro'
+import Layout from '../layouts/base-layout.astro'
+import Logo from '../components/logo.astro'
+import Nav from '../components/nav.astro'
+
+const cx = {
+  main: 'max-w-5xl mx-auto',
+  content: 'vh-75 table w-full bg-cover font-black italic text-5xl px-4 py-32 max-w-lg text-center mx-auto leading-5 hyphens-auto',
+  logo: 'align-middle stroke-current trace'
+}
+
+const theme = {
+  light: '#ff72c6',
+  dark: '#3a0023'
+}
+---
+<Layout className={cx.main} {...theme}>
+  <Nav />
+  <BigContent className={cx.content}>
+    <Logo className={cx.logo} />
+    <BoxedText {...theme}>
+      apps for us
+    </BoxedText>
+  </BigContent>
+  <Footer />
+</Layout>
+

@@ -1,0 +1,16 @@
+---
+const cx = {
+  span: 'text-5xl leading-tight mb-1 inline-block p-1 tracking-tighter'
+}
+const { className = cx.span } = Astro.props
+---
+<style>
+  span {
+    color: var(--light);
+    background-color: var(--dark);
+  }
+</style>
+<span class={className}>
+  <slot />
+</span>
+
