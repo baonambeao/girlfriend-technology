@@ -1,10 +1,10 @@
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
   devOptions: {
-    tailwindConfig: './tailwind.config.js',
+    hostname: '0.0.0.0',
+    tailwindConfig: './tailwind.config.cjs'
   },
   buildOptions: {
     site: 'https://girlfriend.technology'
   }
 })
-
