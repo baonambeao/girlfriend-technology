@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/base-layout.astro'
+import Nav from '../components/nav.astro'
+import Footer from '../components/footer.astro'
+import BigContent from '../components/big-content.astro'
+import BoxedText from '../components/boxed-text.astro'
+
+const cx = {
+  main: 'max-w-5xl mx-auto',
+  content: 'vh-75 table w-full bg-cover font-black italic text-5xl px-4 py-32 max-w-lg text-center mx-auto leading-5 hyphens-auto',
+  boxes: 'text-left inline-block'
+}
+
+const theme = {
+  light: '#FFC437',
+  dark: '#232423'
+}
+---
+<Layout
+  title='girlfriend technology ~ magnet links'
+  className={cx.main}
+  {...theme}
+>
+  <Nav />
+  <BigContent className={cx.content}>
+    <span class={cx.boxes}>
+      <BoxedText {...theme}>
+        {'magnet links'}
+      </BoxedText>
+    </span>
+  </BigContent>
+  <Footer />
+</Layout>
