@@ -11,8 +11,16 @@ a {
   color: var(--dark);
 }
 
-.vh-75 {
-  height: 75vh;
+@media (prefers-color-scheme: dark) {
+  body {
+    --dark: #000000;
+    color: var(--light);
+    background-color: var(--dark);
+  }
+
+  a {
+    color: var(--light);
+  }
 }
 
 .stroke-current path {

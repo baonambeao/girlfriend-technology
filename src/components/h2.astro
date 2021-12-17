@@ -1,0 +1,5 @@
+---
+const cx = 'text-2xl font-bold mt-10 mb-3'
+const { className = cx, ...rest } = Astro.props
+---
+<h2 class={className} {...rest}><slot /></h2>

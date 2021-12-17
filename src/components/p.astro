@@ -1,0 +1,5 @@
+---
+const cx = 'my-4 text-lg'
+const { className = cx, ...rest } = Astro.props
+---
+<p class={className} {...rest}><slot /></p>

@@ -1,0 +1,6 @@
+---
+const cx = 'my-2'
+const { className = cx, ...rest } = Astro.props
+---
+<li class={className} {...rest}><slot /></li>
+

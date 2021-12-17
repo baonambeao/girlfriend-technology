@@ -1,8 +1,6 @@
 ---
-const cx = {
-  span: 'text-5xl leading-tight mb-1 inline-block p-1 tracking-tighter'
-}
-const { className = cx.span } = Astro.props
+const cx = 'text-4xl md:text-5xl leading-tight mb-1 inline-block p-1 tracking-tighter'
+const { className = cx } = Astro.props
 ---
 <style>
   span {
@@ -13,4 +11,3 @@ const { className = cx.span } = Astro.props
 <span class={className}>
   <slot />
 </span>
-

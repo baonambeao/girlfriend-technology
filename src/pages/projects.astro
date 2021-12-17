@@ -7,13 +7,15 @@ import BoxedText from '../components/boxed-text.astro'
 
 const cx = {
   main: 'max-w-5xl mx-auto',
-  content: 'vh-75 table w-full bg-cover font-black italic text-5xl px-4 py-32 max-w-lg text-center mx-auto leading-5 hyphens-auto',
-  boxes: 'text-left inline-block'
+  content: 'px-4 mb-20 w-full flex flex-wrap space-x-3 justify-center md:justify-start',
+  heading: 'w-full bg-cover px-4 py-6 md:py-12',
+  boxes: 'text-left inline-block font-black italic hyphens-auto',
+  project: 'w-32 md:w-48 text-center font-bold text-xl'
 }
 
 const theme = {
-  light: '#5af9f9',
-  dark: '#005252'
+  light: '#19D6FF',
+  dark: '#003641'
 }
 ---
 <Layout
@@ -22,16 +24,27 @@ const theme = {
   {...theme}
 >
   <Nav />
-  <BigContent className={cx.content}>
+  <BigContent className={cx.heading}>
     <span class={cx.boxes}>
       <BoxedText {...theme}>
-        {'> projects'}
-      </BoxedText>
-      <BoxedText {...theme}>
-        in development
+        {'projects'}
       </BoxedText>
     </span>
   </BigContent>
+  <div class={cx.content}>
+    <div class={cx.project}>
+      <a href='/x-to-y'>
+        <img src='/xtoy-icon.png' alt='X to Y icon' />
+        <p>X to Y</p>
+      </a>
+    </div>
+    <div class={cx.project}>
+      <a href='/magnet-links'>
+        <img src='/magnet-links-icon.png' alt='Magnet Links icon' />
+        <p>Magnet Links</p>
+      </a>
+    </div>
+  </div>
   <Footer />
 </Layout>
 

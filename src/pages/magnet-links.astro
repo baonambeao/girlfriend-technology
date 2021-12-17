@@ -1,0 +1,91 @@
+---
+import A from '../components/a.astro'
+import BoxedText from '../components/boxed-text.astro'
+import Footer from '../components/footer.astro'
+import H2 from '../components/h2.astro'
+import Layout from '../layouts/base-layout.astro'
+import Li from '../components/li.astro'
+import Nav from '../components/nav.astro'
+import P from '../components/p.astro'
+import Ul from '../components/ul.astro'
+
+const cx = {
+  main: 'max-w-5xl mx-auto',
+  content: 'max-w-xl px-4 py-0 md:py-4',
+  bigcontent: 'table w-full bg-cover px-4 pt-5 md:py-32 max-w-lg md:mx-auto',
+  boxes: 'text-center inline-block font-black italic text-5xl leading-5 hyphens-auto',
+  icon: 'w-64 mx-auto md:m-8',
+  feature: 'w-full px-4 mt-10 md:mt-12 pb-0 md:py-10 md:flex justify-center',
+  featureicon: 'md:flex md:grow-0 md:justify-end md:items-center md:pr-16',
+  featuretext: 'md:items-center md:grow md:max-w-lg',
+}
+
+const theme = {
+  light: '#FFC437',
+  dark: '#232423'
+}
+
+const links = {
+  chrome: 'https://chrome.google.com/webstore/detail/fkioalmkhgkhojppkapnidbnaecnnkfo',
+  edge: 'https://microsoftedge.microsoft.com/addons/detail/bmdmgkgpnjgmgcpmgnphgihlekjgnapf',
+  firefox: 'https://addons.mozilla.org/addon/magnet-links/',
+  github: 'https://github.com/girlfriend-technology/magnet-links-extension',
+  safari: 'https://apps.apple.com/us/app/magnet-links/id1598258908'
+}
+---
+<Layout
+  title='girlfriend technology ~ magnet links'
+  className={cx.main}
+  {...theme}
+>
+  <Nav />
+  <div class={cx.feature}>
+    <div class={cx.featureicon}>
+      <img src='/magnet-links-icon.png' alt='Magnet Links icon' class={cx.icon}/>
+    </div>
+    <div class={cx.featuretext}>
+      <span class={cx.boxes}>
+        <BoxedText {...theme}>
+          {'Magnet Links'}
+        </BoxedText>
+      </span>
+      <P><em>Open Magnet Links in Put.io</em></P>
+      <P>Tired of seeing errors alerts when you try to open a magnet link? This browser extension helps by adjusting the links to go through Put.io.</P>
+      <P>This is not affiliated with Put.io</P>
+    </div>
+  </div>
+  <div class={cx.content}>
+    <H2>Download now for free!</H2>
+    <P>Available on:</p>
+    <Ul>
+      <Li>
+        <A href={links.safari}>
+          Apple's Safari for Mac and iOS
+        </A>
+      </Li>
+      <Li>
+        <A href={links.firefox}>
+          Mozilla Firefox 
+        </A>
+      </Li>
+      <Li>
+        <A href={links.chrome}>
+          Google Chrome
+        </A>
+      </Li>
+      <Li>
+        <A href={links.edge}>
+          Microsoft Edge
+        </A>
+      </Li>
+    </Ul>
+    <H2>Open and Transparent</H2>
+    <P>
+      A core belief here is that all browser extensions should be open source so you can see exactly what they are doing. Magnet Links collects nothing, and to prove that the entire source code is
+      <A href={links.github}>
+        available on GitHub
+      </A>
+    </P>
+  </div>
+  <Footer />
+</Layout>

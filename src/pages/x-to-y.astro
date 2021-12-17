@@ -1,0 +1,139 @@
+---
+import A from '../components/a.astro'
+import BoxedText from '../components/boxed-text.astro'
+import Code from '../components/code.astro'
+import Footer from '../components/footer.astro'
+import H2 from '../components/h2.astro'
+import Layout from '../layouts/base-layout.astro'
+import Li from '../components/li.astro'
+import Nav from '../components/nav.astro'
+import P from '../components/p.astro'
+import Ul from '../components/ul.astro'
+
+const cx = {
+  main: 'max-w-5xl mx-auto',
+  content: 'max-w-xl px-4 py-0 m-0 md:py-4',
+  bigcontent: 'table w-full bg-cover px-4 pt-5 md:py-32 max-w-lg md:mx-auto',
+  boxes: 'text-center inline-block font-black italic text-5xl leading-5 hyphens-auto',
+  icon: 'w-64 mx-auto md:m-8',
+  feature: 'w-full px-4 mt-10 md:mt-12 pb-0 md:py-10 md:flex justify-center',
+  featureicon: 'md:flex md:grow-0 md:justify-end md:items-center md:pr-16',
+  featuretext: 'md:items-center md:grow md:max-w-lg',
+}
+
+const theme = {
+  light: '#E8C8FF',
+  dark: '#540F85'
+}
+
+const links = {
+  bibliogram: 'https://sr.ht/~cadence/bibliogram',
+  chrome: 'https://chrome.google.com/webstore/detail/ifgihheafoppkadpfneacgpdicmphpcl',
+  edge: 'https://microsoftedge.microsoft.com/addons/detail/eodpmnookfpophmeocggibipjlfmnfpl',
+  firefox: 'https://addons.mozilla.org/addon/x-to-y/',
+  github: 'https://github.com/girlfriend-technology/xtoy-extension',
+  invidious: 'https://github.com/iv-org/invidious',
+  libreddit: 'https://github.com/spikecodes/libreddit',
+  nitter: 'https://github.com/zedeus/nitter',
+  regex: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions',
+  safari: 'https://apps.apple.com/us/app/x-to-y/id1598259546',
+}
+---
+<Layout
+  title='girlfriend technology ~ x to y'
+  className={cx.main}
+  {...theme}
+>
+  <Nav />
+  <div class={cx.feature}>
+    <div class={cx.featureicon}>
+      <img src='/xtoy-icon.png' alt='X to Y icon' class={cx.icon} />
+    </div>
+    <div class={cx.featuretext}>
+      <span class={cx.boxes}>
+        <BoxedText {...theme}>
+          {'X to Y'}
+        </BoxedText>
+      </span>
+      <P><em>Replace words and links</em></P>
+      <P>Ever think it would be funny to replace a word with another? Sick and tired of a website deadnaming you? You are going to enjoy X to Y!</P>
+      <P>X to Y supports plain text, regex, and urls.</P>
+      <P>It's simple!</P>
+      <Ul>
+        <Li>
+          To do regex just type regex (<Code>/pattern/flags</Code>) in the X field, just like you would in <A href={links.regex}>JavaScript</A>
+        </Li>
+        <Li>
+          To replace links, just check the <Code>Link Mode</Code> checkbox
+        </Li>
+      </Ul>
+    </div>
+  </div>
+  <div class={cx.content}>
+    <H2>Download now for free!</H2>
+    <P>Available on:</p>
+    <Ul>
+      <Li>
+        <A href={links.safari}>
+          Apple's Safari for Mac and iOS
+        </A>
+      </Li>
+      <Li>
+        <A href={links.firefox}>
+          Mozilla Firefox 
+        </A>
+      </Li>
+      <Li>
+        <A href={links.chrome}>
+          Google Chrome
+        </A>
+      </Li>
+      <Li>
+        <A href={links.edge}>
+          Microsoft Edge
+        </A>
+      </Li>
+    </Ul>
+
+    <H2>Hide your deadname</H2>
+    <P>
+      Is there a website that refuses to let you change your name? Your employer refusing to update your legal name in the HR portal at work? That's OK, you no longer need to see that garbage!
+    </P>
+
+    <H2>Protect your privacy</H2>
+    <P>
+      Websites like Twitter and YouTube have become slow and bloated. While you want to access the content, they want to access your data and increase their metrics. Luckily, there are privacy focused alternatives that you can point links to instead. That is why X to Y has Link Mode.
+    </P>
+    <P>
+      For example, you can make all links to <Code>https://twitter.com/</Code> go to <Code>https://nitter.ir/</Code> for a faster privacy focused alternative.
+    </P>
+    <P>Here are some links to alternatives and mirrors:</P>
+    <Ul>
+      <Li>
+        <A href={links.nitter}>zedeus/nitter</A>
+        for Twitter
+      </Li>
+      <Li>
+        <A href={links.invidious}>iv-org/invidious</A>
+        for YouTube
+      </Li>
+      <Li>
+        <A href={links.bibliogram}>~cadence/bibliogram</A>
+        for Instagram
+      </Li>
+      <Li>
+        <A href={links.libreddit}>spikecodes/libreddit</A>
+        for Reddit
+      </Li>
+    </Ul>
+
+    <H2>Open and Transparent</H2>
+    <P>
+      A core belief here is that all browser extensions should be open source so you can see exactly what they are doing. X to Y collects nothing, and to prove that the entire source code is
+      <A href={links.github}>
+        available on GitHub
+      </A>
+    </P>
+  </div>
+  <Footer />
+</Layout>

@@ -1,30 +1,32 @@
 ---
-import Logo from './logo.astro';
+import Logo from './logo.astro'
+import A from './a.astro'
+import P from './p.astro'
 
 const cx = {
   footer: 'left-0 right-0 absolute w-full font-light py-16 text-center italic',
   copyright: 'my-3 italic',
   a: 'mx-2 no-underline hover:underline',
   logo: 'inline-block mx-1 stroke-current',
-  links: 'my-2 underline'
+  links: 'my-2'
 }
 ---
 <footer class={cx.footer}>
   <div class={cx.links}>
-    <a
+    <A
       href='/privacy'
       title='privacy policy'
     >
       your privacy is important
-    </a>
+    </A>
   </div>
-  <p class={cx.copyright}>
+  <P className={cx.copyright}>
     © girlfriend technology {new Date().getFullYear()}
-  </p>
-  <a
+  </P>
+  <A
     href='https://melaniekat.com'
     title='with love from melanie kat'
-    class={cx.a}
+    className={cx.a}
   >
     with
     <Logo
@@ -32,6 +34,6 @@ const cx = {
       width='1.5rem'
     />
     from melanie kat
-  </a>
+  </A>
 </footer>
 
