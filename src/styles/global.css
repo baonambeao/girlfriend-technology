@@ -11,10 +11,6 @@ a {
   color: var(--dark);
 }
 
-.vh-75 {
-  height: 75vh;
-}
-
 .stroke-current path {
   stroke: currentColor;
 }

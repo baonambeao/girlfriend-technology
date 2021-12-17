@@ -1,8 +1,6 @@
 ---
-const cx = ''
+const cx = 'underline'
 const { className = cx, ...rest } = Astro.props
 ---
-<a class={className} {...rest}>
-  <slot />
-</a>
+<a class={className} {...rest}><slot /></a>
 

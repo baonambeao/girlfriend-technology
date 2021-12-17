@@ -1,8 +1,5 @@
 ---
-const cx = ''
+const cx = 'mx-1 my-5 list-disc list-inside text-lg';
 const { className = cx, ...rest } = Astro.props
 ---
-<ul class={className} {...rest}>
-  <slot />
-</ul>
-
+<ul class={className} {...rest}><slot /></ul>

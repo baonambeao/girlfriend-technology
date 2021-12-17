@@ -1,8 +1,5 @@
 ---
-const cx = ''
+const cx = 'text-3xl font-bold mt-5 mb-3'
 const { className = cx, ...rest } = Astro.props
 ---
-<h1 class={className} {...rest}>
-  <slot />
-</h1>
-
+<h1 class={className} {...rest}><slot /></h1>
