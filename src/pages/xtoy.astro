@@ -10,7 +10,6 @@ import Li from '../components/li.astro'
 import Nav from '../components/nav.astro'
 import P from '../components/p.astro'
 import Ul from '../components/ul.astro'
-import icon from '../../public/xtoy-icon.png'
 
 const cx = {
   main: 'max-w-5xl mx-auto',
@@ -49,7 +48,7 @@ const links = {
   <Nav />
   <div class={cx.feature}>
     <div class={cx.featureicon}>
-      <img src={icon} alt='X to Y icon' class={cx.icon} />
+      <img src='/xtoy-icon.png' alt='X to Y icon' class={cx.icon} />
     </div>
     <div class={cx.featuretext}>
       <span class={cx.boxes}>
