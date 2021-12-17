@@ -11,6 +11,18 @@ a {
   color: var(--dark);
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    --dark: #000000;
+    color: var(--light);
+    background-color: var(--dark);
+  }
+
+  a {
+    color: var(--light);
+  }
+}
+
 .stroke-current path {
   stroke: currentColor;
 }

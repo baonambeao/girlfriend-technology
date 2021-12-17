@@ -4,7 +4,7 @@ import Logo from './logo.astro'
 
 const cx = {
   header: 'font-light mb-4 h-8',
-  nav: 'items-baseline backdrop-blur p-4 fixed w-full left-0 flex justify-between bg-white/50',
+  nav: 'items-baseline backdrop-blur p-4 fixed w-full left-0 flex justify-between dark:bg-black/50 bg-white/50',
   name: 'text-sm md:text-base mr-4 italic no-underline hover:underline block',
   section: 'flex items-center',
   logo: 'inline-block mr-1 stroke-current'
@@ -32,13 +32,6 @@ const cx = {
       >
         projects
       </NavItem>
-      <NavItem
-        href='/labs'
-        title='labs'
-      >
-        labs
-      </NavItem>
     </div>
   </nav>
 </header>
-
