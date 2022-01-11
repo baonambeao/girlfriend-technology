@@ -1,0 +1,66 @@
+---
+import A from '../components/a.astro'
+import Footer from '../components/footer.astro'
+import H2 from '../components/h2.astro'
+import H3 from '../components/h3.astro'
+import Layout from '../layouts/base-layout.astro'
+import Li from '../components/li.astro'
+import Nav from '../components/nav.astro'
+import P from '../components/p.astro'
+import Ul from '../components/ul.astro'
+
+const cx = {
+  main: 'max-w-5xl mx-auto',
+  content: 'max-w-lg p-4',
+  boxes: 'text-left inline-block',
+  h3: 'my-5 font-bold text-lg',
+  strong: 'font-bold',
+}
+
+const theme = {
+  light: '#fff',
+  dark: '#333',
+}
+---
+<Layout
+  title='girlfriend technology ~ privacy policy'
+  className={cx.main}
+  {...theme}
+>
+  <Nav />
+  <div class={cx.content}>
+    <H2>
+      Example Magnet Links
+    </H2>
+    <P>
+      The magnet uri scheme for pointing to files online by their hash as opposed to their location.
+    </P>
+    <H3>
+      Links
+    </H3>
+    <Ul>
+      <Li>
+        <A href="magnet:?xt=urn:btih:6H6NYFDC2NSTB5JGYHMUALXMSEALPOQY&dn=ubuntu-21.10-desktop-amd64.iso&xl=3116482560&tr=https%3A%2F%2Ftorrent.ubuntu.com%2Fannounce">
+          🧲 Ubuntu 21.10
+        </A>
+      </Li>
+      <Li>
+        <A href="magnet:?xt=urn:btih:H6KJE2CXQ3NGEDGUUGLWP5KLCP3NYH4V&dn=LibreOffice_7.2.3_Win_x64.msi&xl=339107840&tr=http%3A%2F%2Ftracker.documentfoundation.org%3A6969%2Fannounce">
+          🧲 LibreOffice 7.2.3
+        </A>
+      </Li>
+      <Li>
+        <A href="magnet:?xt=urn:btih:M66FT5MQLSVFQI5LNCNWPXCZRDCDMAEP&dn=as17-140-21391&tr=http%3A%2F%2Fbt1.archive.org%3A6969%2Fannounce">
+          🧲 Apollo 17 Pic
+        </A>
+      </Li>
+      <Li>
+        <A href="magnet:?xt=urn:btih:2ODHUDRAGZA6MHQRMDKFV7HXP4C2UY2H&dn=random.org-pregenerated-2021-11-txt&tr=http%3A%2F%2Ftracker.random.org%3A6969%2Fannounce">
+          🧲 Pregenerated Files
+        </A>
+      </Li>
+    </Ul>
+  </div>
+  <Footer />
+</Layout>
+
