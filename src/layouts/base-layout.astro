@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css'
+
 const { 
   title = 'girlfriend technology',
   description = 'apps for us',
@@ -27,9 +29,7 @@ const {
     <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
     <link rel='icon' href='/favicon.ico' />
     <link rel='mask-icon' sizes='any' href='/mask-icon.svg' color={light} />
-    <style global define:vars={{ dark, light }}>
-      @import '../styles/global.css';
-    </style>
+    <style global define:vars={{ dark, light }} />
   </head>
   <body class={className}>
     <slot />
