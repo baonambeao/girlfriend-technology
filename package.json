@@ -14,7 +14,7 @@
     "@astrojs/tailwind": "^0.2.3",
     "astro": "^0.26.1",
     "autoprefixer": "^10.4.7",
-    "tailwindcss": "^3.1.4"
+    "tailwindcss": "^3.1.5"
   },
   "snowpack": {
     "workspaceRoot": "../.."
